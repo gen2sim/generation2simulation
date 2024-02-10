@@ -1,0 +1,18 @@
+Task: TurnOnFaucet
+Task Description: "turn on the faucet"
+```
+def compute_reward(self):
+    # reward function
+    faucet_pose = self.env.get_pose_by_link_name("faucet", "link_0")
+    gripper_pose = self.env.get_robot_gripper_pose()
+    distance_gripper_to_switch = torch.norm(faucet_pose - gripper_pose, dim=-1)
+    switch_state = self.env.get_state_by_joint_name("faucet", "joint_0")
+    
+    cost = distance_gripper_to_switch - switch_state
+    reward = -cost
+    
+    target_switch_state = self.env.get_limits_by_joint_name("faucet", "joint_0")["upper"]
+    success = torch.abs(switch_state - target_switch_state) < 0.1
+    
+    return reward, success
+```

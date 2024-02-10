@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gen2Sim</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Gen2Sim: Scaling up Robot Learning in Simulation with Generative Models</h1>
+                        <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2023</a>
+                    </h3> -->
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a target="_blank" href="https://pushkalkatara.github.io/">
+                                    Pushkal&#160;Katara*</a>
+                                    <a href="mailto:pkatara@andrew.cmu.edu">
+                                        <span class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </a>
+                                    <sup>1</sup>,
+                                <a target="_blank" href="https://www.zhou-xian.com/">Zhou&#160;Xian*</a>
+                                </a>
+                                <sup>1</sup>,
+                                <a target="_blank"
+                                    href="https://www.cs.cmu.edu/~katef/">Katerina&#160;Fragkiadaki</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Carnegie Mellon University </span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+
+                        <span class="author-block">
+                                    <span class="icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                            Corresponding author: pkatara@andrew.cmu.edu
+                        </span>
+                        </div>
+                        <!-- <div class="is-size-5 publication-authors">
+                        <span class="author-block">Work done during the first author's internship at NVIDIA</span>
+                        </div> -->
+
+                        <!-- <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>&dagger;</sup>Equal Contribution</span>
+                        <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
+                    </div> -->
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- TODO REPLACE ALL LINKS -->
+                                <span class="link-block">
+                                    <a target="_blank" href="https://arxiv.org/abs/2310.18308"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+
+                                <span class="link-block">
+                                    <!-- <a target="_blank" href="assets/eureka_paper.pdf"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>PDF</span>
+                                    </a> -->
+                                    <a target="_blank" href="https://github.com/pushkalkatara/Gen2Sim"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                    <!-- <a target="_blank" href="https://github.com/vimalabs/VIMA#pretrained-models"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fa fa-network-wired"></i>
+                                        </span>
+                                        <span>Models</span>
+                                    </a> -->
+                                    <!-- <a target="_blank" href="https://github.com/vimalabs/VimaBench"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-robot"></i>
+                                        </span>
+                                        <span>Benchmark</span>
+                                    </a> -->
+                                    <!-- <a target="_blank" href="https://huggingface.co/datasets/VIMA/VIMA-Data"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-database"></i>
+                                        </span>
+                                        <span>Dataset</span>
+                                    </a> -->
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding: 0">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <video poster="" id="" autoplay controls muted loop width="100%" playbackRate=1.0>
+                    <source src="videos/articulated_policy.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            Generalist robot manipulators need to learn a wide variety of manipulation skills across diverse environments. 
+                            Current robot training pipelines rely on humans to provide kinesthetic demonstrations or to program simulation 
+                            environments and to code up reward functions for reinforcement learning. Such human involvement is an important 
+                            bottleneck towards scaling up robot learning across diverse tasks and environments. We propose Generation to Simulation (Gen2Sim), 
+                            a method for scaling up robot skill learning in simulation by automating generation of 3D assets, task descriptions, 
+                            task decompositions and reward functions using large pre-trained generative models of language and vision. 
+                            We generate 3D assets for simulation by lifting open-world 2D object-centric images to 3D using image diffusion models 
+                            and querying LLMs to determine plausible physics parameters. Given URDF files of generated and human-developed assets, 
+                            we chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding 
+                            python reward functions for reinforcement learning. We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, 
+                            where reinforcement learning with non temporally decomposed reward functions fails. Gen2Sim provides a viable path 
+                            for scaling up reinforcement learning for robot manipulators in simulation, both by diversifying and expanding task 
+                            and environment development, and by facilitating the discovery of reinforcement-learned behaviors through temporal 
+                            task decomposition in RL. Our work contributes hundreds of simulated assets, tasks and demonstrations, taking a step 
+                            towards fully autonomous robotic manipulation skill acquisition in simulation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Gen2Sim Skill Acquisition Demo</span></h2>
+                        <p style="font-size: 125%">
+                            In this demo, we visualize the generated environment, task descriptions, task decomposition and reward function 
+                            from Gen2Sim. We show manipulation skills acquired while interacting with assets with varying part affordances and part structures. We also show skill chaining to achieve long-horizon tasks in complex environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="columns" style="align-items: end;">
+                <div class="column is-half">
+                    <p style="font-size: 1.5em"><b>Manipulation Skills</b></p>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="videos/part_affordances/dishwasher/dishwasher_1_OpenDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/dishwasher/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_affordances/dishwasher/dishwasher_4_CloseDoor_3_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/dishwasher/response_2.txt' onclick="populateDemo(this, 1);">
+
+                        <!-- <img src="videos/part_affordances/faucet/turn_faucet.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/faucet/response.txt' onclick="populateDemo(this, 1);"> -->
+
+                        <img src="videos/part_affordances/microwave/microwave_2_OpenDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/microwave/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_affordances/microwave/microwave_1_CloseDoor_11_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/microwave/response_2.txt' onclick="populateDemo(this, 1);">
+                        
+                        <img src="videos/part_affordances/oven/oven_1_OpenDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/oven/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_affordances/safe/safe_1_OpenDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/safe/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <!-- <img src="videos/part_affordances/sanitiser/press_sanitiser.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/sanitiser/response.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_affordances/switch/turn_on_switch.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward: 
+                        [sep]
+                        videos/part_affordances/switch/response.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_affordances/toaster/toaster.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_affordances/toaster/response.txt' onclick="populateDemo(this, 1);"> -->
+
+                        <img src="videos/part_structure/cabinet_1_OpenDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_structure/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_structure/cabinet_4_CloseDoor_3_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_structure/response_2.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_structure/cabinet_9_CloseDrawer_8_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_structure/response_3.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/part_structure/table_2_CloseDoor_0_.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_structure/response_4.txt' onclick="populateDemo(this, 1);">
+
+                        <img src="videos/long_horizon/tennis_ball/put_tennis_ball_cabinet.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/long_horizon/tennis_ball/response_1.txt' onclick="populateDemo(this, 1);">
+
+                        <!-- <img src="videos/long_horizon/veggie_refridgerator/veggie_refridgerator.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
+                        [sep]
+                        videos/part_structures/cabin.txt' onclick="populateDemo(this, 1);"> -->
+
+                    </div>
+
+                </div>
+                <div class="row border rounded" style="padding-top:12px; padding-bottom:12px;">
+                    <div class="col-md-6">
+                        <video id="demo-video-1" style="border-radius: 5px; width: 100%; height: 320px;" autoplay loop muted webkit-playsinline
+                            playsinline onclick="setAttribute('controls', 'true');">
+                            <source id="expandedImg-1" src="videos/placeholder.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="imgtext-1" style="font-size: 1.5em">Select an image above:</div>
+                <div>
+                    <pre
+                        class="p-1"><code class="language-python" id="answer-1">Gen2Sim response shown within code block.</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Gen2Sim Components</span></h2>
+
+                        <!-- <img src="assets/images/eureka.png" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" />
+                        <br> -->
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted width="90%" playbackRate=8.0 style="border-radius: 5px;">
+                            <source src="videos/overview_video.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                        <span style="font-size: 125%"><b>Overview:</b> We generate 3D assets for simulation by lifting open-world 2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics parameters. Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding python reward functions for reinforcement learning.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+
+                        <div class="columns is-centered has-text-centered">
+                            <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                                <source src="videos/3d_lifting.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <span style="font-size: 125%">
+                        <span style="font-weight: bold; font-size: 110%">Asset Generation</span> <br>
+                        We generate <b> Visual, Collision and Physics parameters</b> of a URDF by converting images to 3D meshes using a NeRF distillation pipeline, followed by a differentiable mesh fine-tuning step. We query LLMs about the physics properties like mass, dimensions based on asset's category.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                            <source src="videos/3d_assets_new.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                        <span style="font-size: 125%">
+                        <span style="font-weight: bold">Generating 3D Assets from in-the-wild images:</span>
+                        We generate hundreds of assets with diverse appearance, geometry and physics.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                            <source src="videos/llm.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                        <!-- <img src="assets/images/reward_diff.png" class="interpolation-image" alt="" -->
+                        <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;" /> -->
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Task and Reward Generation</span> <br>
+                            We extract relevant context from URDF files of generated and human-developed assets, and chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding 
+                            python reward functions. Finally we use PPO, a model-free reinforcement learning algorithm to acquire skills in simulation.
+                        </span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{katara2023gen2sim,
+            title={Gen2Sim: Scaling up Robot Learning in Simulation with Generative Models}, 
+            author={Pushkal Katara and Zhou Xian and Katerina Fragkiadaki},
+            year={2023},
+            eprint={2310.18308},
+            archivePrefix={arXiv},
+            primaryClass={cs.RO}
+      }</code></pre>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a
+                                href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>,
+                            <a href="https://eureka-research.github.io/">Eureka</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+
+    timeoutIds = [];
+
+    function populateDemo(imgs, num) {
+        // Get the expanded image
+        var expandImg = document.getElementById("expandedImg-" + num);
+        // Get the image text
+        var imgText = document.getElementById("imgtext-" + num);
+        var answer = document.getElementById("answer-" + num);
+
+        // Use the same src in the expanded image as the image being clicked on from the grid
+        expandImg.src = imgs.src.replace(".png", ".mp4");
+        var video = document.getElementById('demo-video-' + num);
+        // or video = $('.video-selector')[0];
+        video.pause()
+        video.load();
+        video.play();
+        video.removeAttribute('controls');
+
+        console.log(expandImg.src);
+        // Use the value of the alt attribute of the clickable image as text inside the expanded image
+        var qa = imgs.alt.split("[sep]");
+        imgText.innerHTML = qa[0];
+        answer.innerHTML = "";
+        // Show the container element (hidden with CSS)
+        expandImg.parentElement.style.display = "block";
+        for (timeoutId of timeoutIds) {
+            clearTimeout(timeoutId);
+        }
+
+        // NOTE (wliang): Modified from original to read from file instead
+        fetch(qa[1])
+            .then(response => response.text())
+            .then(contents => {
+                // Call the processData function and pass the contents as an argument
+                typeWriter(contents, 0, qa[0], num);
+            })
+            .catch(error => console.error('Error reading file:', error));
+    }
+
+    function typeWriter(txt, i, q, num) {
+        var imgText = document.getElementById("imgtext-" + num);
+        var answer = document.getElementById("answer-" + num);
+        if (imgText.innerHTML == q) {
+            for (let k = 0; k < 5; k++) {
+                if (i < txt.length) {
+                    if (txt.charAt(i) == "\\") {
+                        answer.innerHTML += "\n";
+                        i += 1;
+                    } else {
+                        answer.innerHTML += txt.charAt(i);
+                    }
+                    i++;
+                }
+            }
+            hljs.highlightAll();
+            timeoutIds.push(setTimeout(typeWriter, 1, txt, i, q, num));
+        }
+    }
+
+</script>
+
+</html>
